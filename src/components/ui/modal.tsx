@@ -3,8 +3,7 @@
 /**
  * Reusable Modal component with backdrop blur, sticky header, and close button.
  */
-import type { ReactNode } from "react";
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, type ReactNode } from "react";
 import { X } from "lucide-react";
 import styles from "./modal.module.css";
 
