@@ -1,0 +1,505 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.backButton:hover {
+  text-decoration: underline;
+}
+
+.headerCard {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.headerLeft {
+  display: flex;
+  gap: 24px;
+}
+
+.avatarLarge {
+  width: 80px;
+  height: 80px;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.empInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.empName {
+  font-size: 24px;
+  margin: 0;
+}
+
+.empID {
+  font-size: 14px;
+  color: var(--color-medium-grey);
+}
+
+.positionsRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  background: var(--color-light-grey);
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+}
+
+.posItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.posLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--color-medium-grey);
+  font-weight: 600;
+}
+
+.posValue {
+  font-size: 14px;
+  color: var(--color-dark);
+}
+
+.posValueActing {
+  font-size: 14px;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.posArrow {
+  color: var(--color-medium-grey);
+  opacity: 0.5;
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  min-width: 300px;
+}
+
+.statusRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.reasonBadge {
+  padding: 4px 12px;
+  background: rgba(15, 118, 110, 0.05);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.durationInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dateLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-dark);
+  text-align: right;
+}
+
+.progressContainer {
+  width: 100%;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--color-medium-grey);
+  margin-bottom: 6px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: var(--color-light-grey);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width 1s ease-out;
+}
+
+/* Actions */
+.actionsRow {
+  display: flex;
+  gap: 12px;
+}
+
+.primaryAction {
+  background: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondaryAction {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-dark);
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dangerAction {
+  background: transparent;
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Tab Content */
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tabContent {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  min-height: 400px;
+  padding: 32px;
+}
+
+/* Compensation Tab */
+.compensationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 24px;
+}
+
+.compCard {
+  background: var(--color-light-grey);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.cardTitle {
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 12px;
+}
+
+.compRow,
+.compareRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.compValue {
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.compSum {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.compareItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.compareLabel {
+  font-size: 13px;
+  color: var(--color-medium-grey);
+}
+
+.compareValues {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.oldVal {
+  color: var(--color-medium-grey);
+  text-decoration: line-through;
+}
+
+.newVal {
+  color: var(--color-success);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.totalValues {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.oldTotal {
+  color: var(--color-medium-grey);
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.totalRow {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.newTotal {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-dark);
+}
+
+/* Timeline Tab */
+.timelineTab {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 40px 0;
+}
+
+.timelineBarContainer {
+  padding: 0 40px;
+}
+
+.timelineBar {
+  height: 8px;
+  background: var(--color-light-grey);
+  border-radius: var(--radius-full);
+  position: relative;
+  width: 100%;
+}
+
+.marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.markerDot {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 3px solid var(--color-medium-grey);
+  border-radius: 50%;
+}
+
+.markerDotToday {
+  background: var(--color-primary);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.2);
+  width: 20px;
+  height: 20px;
+}
+
+.markerLabel {
+  position: absolute;
+  top: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--bg-card);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.markerToday .markerLabel {
+  top: -30px;
+}
+
+.markerStart {
+  left: 0;
+}
+.markerStart .markerDot {
+  border-color: var(--color-success);
+}
+.markerEnd {
+  left: 100%;
+}
+
+.timelineStats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.timelineStatItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-medium-grey);
+}
+
+.timelineStatItem strong {
+  color: var(--color-dark);
+}
+
+/* Activity Log */
+.activityLog {
+  display: flex;
+  flex-direction: column;
+}
+
+.logItem {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.logItem:last-child {
+  padding-bottom: 0;
+}
+
+.logItem::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 16px;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.logItem:last-child::before {
+  display: none;
+}
+
+.logDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid var(--color-primary);
+  z-index: 1;
+  margin-top: 4px;
+}
+
+.logContent {
+  flex: 1;
+}
+
+.logHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logAction {
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.logTime {
+  font-size: 13px;
+  color: var(--color-medium-grey);
+}
+
+.logActor {
+  font-size: 13px;
+  color: var(--color-medium-grey);
+  margin-bottom: 4px;
+}
+
+.logDetails {
+  background: var(--color-light-grey);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .headerCard {
+    flex-direction: column;
+  }
+  .headerRight {
+    align-items: flex-start;
+    min-width: 0;
+  }
+  .compensationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .totalRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .totalValues {
+    justify-content: flex-start;
+  }
+}
