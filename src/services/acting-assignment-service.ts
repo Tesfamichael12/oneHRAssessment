@@ -288,16 +288,16 @@ async function simulateDelay(): Promise<void> {
 }
 
 function synchronizeLifecycleForStore(): void {
-  let hasUpdates = false;
+  let hasUpdates: boolean = false;
   const synchronizedAssignments = mockAssignments.map((assignment) => {
     const syncResult = synchronizeAssignmentLifecycle(assignment);
-    if (syncResult.statusChanged === true) {
+    if (syncResult.statusChanged) {
       hasUpdates = true;
     }
     return syncResult.assignment;
   });
 
-  if (hasUpdates === true) {
+  if (hasUpdates) {
     mockAssignments = synchronizedAssignments;
   }
 }
